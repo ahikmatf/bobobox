@@ -12,6 +12,8 @@
 		3952D200257223DF00E5249C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D1FF257223DF00E5249C /* ViewController.swift */; };
 		3952D205257223E100E5249C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3952D204257223E100E5249C /* Assets.xcassets */; };
 		3952D208257223E100E5249C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3952D206257223E100E5249C /* LaunchScreen.storyboard */; };
+		3952D218257312BE00E5249C /* hotel_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 3952D216257312BE00E5249C /* hotel_list.json */; };
+		3952D219257312BE00E5249C /* pod_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 3952D217257312BE00E5249C /* pod_list.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		3952D204257223E100E5249C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3952D207257223E100E5249C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3952D209257223E100E5249C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3952D216257312BE00E5249C /* hotel_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotel_list.json; sourceTree = "<group>"; };
+		3952D217257312BE00E5249C /* pod_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pod_list.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +58,9 @@
 		3952D1FA257223DF00E5249C /* bobobox */ = {
 			isa = PBXGroup;
 			children = (
+				3952D21B257312C500E5249C /* Resources */,
 				3952D2142572326300E5249C /* Application */,
 				3952D1FF257223DF00E5249C /* ViewController.swift */,
-				3952D204257223E100E5249C /* Assets.xcassets */,
-				3952D206257223E100E5249C /* LaunchScreen.storyboard */,
-				3952D209257223E100E5249C /* Info.plist */,
 			);
 			path = bobobox;
 			sourceTree = "<group>";
@@ -70,6 +72,18 @@
 				3952D1FD257223DF00E5249C /* SceneDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		3952D21B257312C500E5249C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3952D204257223E100E5249C /* Assets.xcassets */,
+				3952D209257223E100E5249C /* Info.plist */,
+				3952D206257223E100E5249C /* LaunchScreen.storyboard */,
+				3952D216257312BE00E5249C /* hotel_list.json */,
+				3952D217257312BE00E5249C /* pod_list.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3952D208257223E100E5249C /* LaunchScreen.storyboard in Resources */,
+				3952D218257312BE00E5249C /* hotel_list.json in Resources */,
 				3952D205257223E100E5249C /* Assets.xcassets in Resources */,
+				3952D219257312BE00E5249C /* pod_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
