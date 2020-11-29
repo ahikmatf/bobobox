@@ -39,3 +39,14 @@ extension HotelListDTO {
         }
     }
 }
+
+extension HotelListDTO {
+    func toDomain() -> [Hotel] {
+        var hotels = [Hotel]()
+        data.forEach { (hotelDTO) in
+            hotels.append(Hotel(id: hotelDTO.id, name: hotelDTO.name))
+        }
+        
+        return hotels
+    }
+}

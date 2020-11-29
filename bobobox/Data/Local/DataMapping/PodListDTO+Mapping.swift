@@ -51,3 +51,19 @@ extension PodListDTO.PodDTO {
         }
     }
 }
+
+extension PodListDTO {
+    func toDomain() -> [Pod] {
+        var pods = [Pod]()
+        data.forEach { (podDTO) in
+            pods.append(Pod(roomId: podDTO.roomId,
+                            roomStatusCode: podDTO.roomStatusCode,
+                            roomStatusLabel: podDTO.roomStatusLabel,
+                            roomName: podDTO.roomName,
+                            qrCode: podDTO.qrCode
+            ))
+        }
+        
+        return pods
+    }
+}

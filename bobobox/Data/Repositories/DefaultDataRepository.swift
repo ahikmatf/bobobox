@@ -16,13 +16,13 @@ final class DefaultDataRepository {
 }
 
 extension DefaultDataRepository: DataRepository {
-    func fetchHotelList() {
-        guard let hotelsList: HotelListDTO = fileReader.fromJSON(named: "hotel_list") else { return }
-        print(hotelsList.data.count)
+    func fetchHotelList() -> [Hotel] {
+        guard let hotelsList: HotelListDTO = fileReader.fromJSON(named: "hotel_list") else { return [] }
+        return hotelsList.toDomain()
     }
     
-    func fetchPodList() {
-        guard let podsList: PodListDTO = fileReader.fromJSON(named: "pod_list") else { return }
-        print(podsList.data.count)
+    func fetchPodList() -> [Pod] {
+        guard let podsList: PodListDTO = fileReader.fromJSON(named: "pod_list") else { return [] }
+        return podsList.toDomain()
     }
 }

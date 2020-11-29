@@ -8,8 +8,8 @@
 import Foundation
 
 protocol DataUseCase {
-    func getHotelList()
-    func getPodList()
+    func getHotelList() -> [Hotel]
+    func getPodList() -> [Pod]
 }
 
 final class DefaultDataUseCase {
@@ -21,11 +21,11 @@ final class DefaultDataUseCase {
 }
 
 extension DefaultDataUseCase: DataUseCase {
-    func getHotelList() {
-        repository.fetchHotelList()
+    func getHotelList() -> [Hotel] {
+        return repository.fetchHotelList()
     }
     
-    func getPodList() {
-        repository.fetchPodList()
+    func getPodList() -> [Pod] {
+        return repository.fetchPodList()
     }
 }
