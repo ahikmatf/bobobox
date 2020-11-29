@@ -25,13 +25,14 @@ final class MainSceneDIContainer: MainFlowCoordinatorDependencies {
         let viewModel = makeLoginViewModel(actions: actions)
         return LoginViewController(viewModel: viewModel)
     }
+    
+    func makeMainViewModel() -> MainViewModel {
+        return DefaultMainViewModel(useCase: makeDataUseCase())
+    }
 
-    func makeMainViewController() -> UIViewController {
-        let vc = ViewController()
-        vc.view.backgroundColor = .cyan
-        vc.useCase = makeDataUseCase()
-        
-        return vc
+    func makeMainViewController(userName: String) -> UIViewController {
+        let viewModel = makeMainViewModel()
+        return MainViewController(viewModel: viewModel, userName: userName)
     }
     
     func makeMainFlowCoordinator(navigationController: UINavigationController) -> MainFlowCoordinator {

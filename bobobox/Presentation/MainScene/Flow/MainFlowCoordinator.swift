@@ -10,7 +10,7 @@ import UIKit
 
 protocol MainFlowCoordinatorDependencies {
     func makeLoginViewController(actions: LoginViewModelActions) -> UIViewController 
-    func makeMainViewController() -> UIViewController
+    func makeMainViewController(userName: String) -> UIViewController
 }
 
 class MainFlowCoordinator {
@@ -23,13 +23,13 @@ class MainFlowCoordinator {
     }
     
     func start() {
-        let actions = LoginViewModelActions(showMain: showMain(email:))
+        let actions = LoginViewModelActions(showMain: showMain(userName:))
         let vc = dependencies.makeLoginViewController(actions: actions)
         navigationController.setViewControllers([vc], animated: false)
     }
     
-    private func showMain(email: String) {
-        let vc = ViewController()
+    private func showMain(userName: String) {
+        let vc = dependencies.makeMainViewController(userName: userName)
         navigationController.setViewControllers([vc], animated: true)
     }
 }
