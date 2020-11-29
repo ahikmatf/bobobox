@@ -16,11 +16,9 @@ protocol LoginViewModel {
 }
 
 class DefaultLoginViewModel: LoginViewModel {
-    let useCase: DataUseCase
     let actions: LoginViewModelActions
     
-    init(useCase: DataUseCase, actions: LoginViewModelActions) {
-        self.useCase = useCase
+    init(actions: LoginViewModelActions) {
         self.actions = actions
     }
     
