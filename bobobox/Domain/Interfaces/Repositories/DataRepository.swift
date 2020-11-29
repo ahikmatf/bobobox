@@ -8,6 +8,6 @@
 import Foundation
 
 protocol DataRepository {
-    func fetchHotelsList()
-    func fetchPodsList()
+    func fetchHotelList()
+    func fetchPodList()
 }
