@@ -14,6 +14,12 @@
 		3952D208257223E100E5249C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3952D206257223E100E5249C /* LaunchScreen.storyboard */; };
 		3952D218257312BE00E5249C /* hotel_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 3952D216257312BE00E5249C /* hotel_list.json */; };
 		3952D219257312BE00E5249C /* pod_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 3952D217257312BE00E5249C /* pod_list.json */; };
+		3952D222257313E100E5249C /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D221257313E100E5249C /* FileReader.swift */; };
+		3952D2262573153600E5249C /* HotelDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2252573153600E5249C /* HotelDTO+Mapping.swift */; };
+		3952D22B2573172D00E5249C /* PodDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D22A2573172D00E5249C /* PodDTO+Mapping.swift */; };
+		3952D22E25731B4D00E5249C /* DefaultDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D22D25731B4D00E5249C /* DefaultDataRepository.swift */; };
+		3952D23525731BCE00E5249C /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D23425731BCE00E5249C /* DataRepository.swift */; };
+		3952D23925731D8C00E5249C /* DataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D23825731D8C00E5249C /* DataUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		3952D209257223E100E5249C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3952D216257312BE00E5249C /* hotel_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotel_list.json; sourceTree = "<group>"; };
 		3952D217257312BE00E5249C /* pod_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pod_list.json; sourceTree = "<group>"; };
+		3952D221257313E100E5249C /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		3952D2252573153600E5249C /* HotelDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HotelDTO+Mapping.swift"; sourceTree = "<group>"; };
+		3952D22A2573172D00E5249C /* PodDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PodDTO+Mapping.swift"; sourceTree = "<group>"; };
+		3952D22D25731B4D00E5249C /* DefaultDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataRepository.swift; sourceTree = "<group>"; };
+		3952D23425731BCE00E5249C /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
+		3952D23825731D8C00E5249C /* DataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,8 @@
 		3952D1FA257223DF00E5249C /* bobobox */ = {
 			isa = PBXGroup;
 			children = (
+				3952D23125731BB100E5249C /* Domain */,
+				3952D21E257313B600E5249C /* Data */,
 				3952D21B257312C500E5249C /* Resources */,
 				3952D2142572326300E5249C /* Application */,
 				3952D1FF257223DF00E5249C /* ViewController.swift */,
@@ -84,6 +98,74 @@
 				3952D217257312BE00E5249C /* pod_list.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3952D21E257313B600E5249C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3952D220257313C700E5249C /* Local */,
+				3952D21F257313BC00E5249C /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3952D21F257313BC00E5249C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3952D22D25731B4D00E5249C /* DefaultDataRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3952D220257313C700E5249C /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				3952D224257314EE00E5249C /* DataMapping */,
+				3952D221257313E100E5249C /* FileReader.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		3952D224257314EE00E5249C /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				3952D2252573153600E5249C /* HotelDTO+Mapping.swift */,
+				3952D22A2573172D00E5249C /* PodDTO+Mapping.swift */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		3952D23125731BB100E5249C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3952D23725731D6500E5249C /* UseCases */,
+				3952D23225731BBA00E5249C /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3952D23225731BBA00E5249C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				3952D23325731BC100E5249C /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		3952D23325731BC100E5249C /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3952D23425731BCE00E5249C /* DataRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3952D23725731D6500E5249C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3952D23825731D8C00E5249C /* DataUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +240,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3952D200257223DF00E5249C /* ViewController.swift in Sources */,
+				3952D23525731BCE00E5249C /* DataRepository.swift in Sources */,
+				3952D2262573153600E5249C /* HotelDTO+Mapping.swift in Sources */,
+				3952D23925731D8C00E5249C /* DataUseCase.swift in Sources */,
 				3952D1FC257223DF00E5249C /* AppDelegate.swift in Sources */,
+				3952D222257313E100E5249C /* FileReader.swift in Sources */,
+				3952D22B2573172D00E5249C /* PodDTO+Mapping.swift in Sources */,
 				3952D1FE257223DF00E5249C /* SceneDelegate.swift in Sources */,
+				3952D22E25731B4D00E5249C /* DefaultDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
