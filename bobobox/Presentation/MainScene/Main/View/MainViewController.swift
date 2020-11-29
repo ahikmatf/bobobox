@@ -10,6 +10,17 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var hotelNameLabel: UILabel!
+    
+    @IBAction func switchHotelDidTap(_ sender: UIButton) {
+    }
+    
+    @IBAction func switchPodFilterDidTap(_ sender: UIButton) {
+    }
+    
+    @IBAction func switchViewTypeDidTap(_ sender: UISegmentedControl) {
+    }
+    
     
     let viewModel: MainViewModel
     let userName: String

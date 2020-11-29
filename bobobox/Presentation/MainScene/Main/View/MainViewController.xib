@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="bobobox" customModuleProvider="target">
             <connections>
                 <outlet property="greetingLabel" destination="UFg-qT-y8n" id="4ya-NB-ozu"/>
+                <outlet property="hotelNameLabel" destination="AAj-nP-JcE" id="4wT-Cx-rNe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -56,6 +57,9 @@
                             <state key="normal">
                                 <imageReference key="image" image="arrowtriangle.down.fill" catalog="system" symbolScale="large"/>
                             </state>
+                            <connections>
+                                <action selector="switchHotelDidTap:" destination="-1" eventType="touchUpInside" id="OBD-Oj-PXe"/>
+                            </connections>
                         </button>
                         <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="z4n-E9-E2U">
                             <rect key="frame" x="312" y="141.5" width="82" height="32"/>
@@ -67,12 +71,18 @@
                                     <imageReference key="image" image="rectangle.grid.2x2" catalog="system" renderingMode="template"/>
                                 </segment>
                             </segments>
+                            <connections>
+                                <action selector="switchViewTypeDidTap:" destination="-1" eventType="valueChanged" id="Ghd-an-kJk"/>
+                            </connections>
                         </segmentedControl>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3n-H6-66J">
                             <rect key="frame" x="20" y="148" width="272" height="18"/>
                             <state key="normal" title="All Status">
                                 <imageReference key="image" image="arrowtriangle.down.fill" catalog="system" symbolScale="medium"/>
                             </state>
+                            <connections>
+                                <action selector="switchPodFilterDidTap:" destination="-1" eventType="touchUpInside" id="QS1-M4-oKY"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have some task to do today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCd-Zm-otp">
                             <rect key="frame" x="20" y="113" width="314" height="15"/>
