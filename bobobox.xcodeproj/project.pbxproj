@@ -15,11 +15,15 @@
 		3952D218257312BE00E5249C /* hotel_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 3952D216257312BE00E5249C /* hotel_list.json */; };
 		3952D219257312BE00E5249C /* pod_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 3952D217257312BE00E5249C /* pod_list.json */; };
 		3952D222257313E100E5249C /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D221257313E100E5249C /* FileReader.swift */; };
-		3952D2262573153600E5249C /* HotelDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2252573153600E5249C /* HotelDTO+Mapping.swift */; };
-		3952D22B2573172D00E5249C /* PodDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D22A2573172D00E5249C /* PodDTO+Mapping.swift */; };
+		3952D2262573153600E5249C /* HotelListDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2252573153600E5249C /* HotelListDTO+Mapping.swift */; };
+		3952D22B2573172D00E5249C /* PodListDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D22A2573172D00E5249C /* PodListDTO+Mapping.swift */; };
 		3952D22E25731B4D00E5249C /* DefaultDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D22D25731B4D00E5249C /* DefaultDataRepository.swift */; };
 		3952D23525731BCE00E5249C /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D23425731BCE00E5249C /* DataRepository.swift */; };
 		3952D23925731D8C00E5249C /* DataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D23825731D8C00E5249C /* DataUseCase.swift */; };
+		3952D23C25731FDF00E5249C /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D23B25731FDF00E5249C /* AppFlowCoordinator.swift */; };
+		3952D240257320DB00E5249C /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D23F257320DB00E5249C /* AppDIContainer.swift */; };
+		3952D2432573211E00E5249C /* MainSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2422573211E00E5249C /* MainSceneDIContainer.swift */; };
+		3952D2492573253300E5249C /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2482573253300E5249C /* MainFlowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +37,15 @@
 		3952D216257312BE00E5249C /* hotel_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotel_list.json; sourceTree = "<group>"; };
 		3952D217257312BE00E5249C /* pod_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pod_list.json; sourceTree = "<group>"; };
 		3952D221257313E100E5249C /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
-		3952D2252573153600E5249C /* HotelDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HotelDTO+Mapping.swift"; sourceTree = "<group>"; };
-		3952D22A2573172D00E5249C /* PodDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PodDTO+Mapping.swift"; sourceTree = "<group>"; };
+		3952D2252573153600E5249C /* HotelListDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HotelListDTO+Mapping.swift"; sourceTree = "<group>"; };
+		3952D22A2573172D00E5249C /* PodListDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PodListDTO+Mapping.swift"; sourceTree = "<group>"; };
 		3952D22D25731B4D00E5249C /* DefaultDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDataRepository.swift; sourceTree = "<group>"; };
 		3952D23425731BCE00E5249C /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		3952D23825731D8C00E5249C /* DataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataUseCase.swift; sourceTree = "<group>"; };
+		3952D23B25731FDF00E5249C /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		3952D23F257320DB00E5249C /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
+		3952D2422573211E00E5249C /* MainSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDIContainer.swift; sourceTree = "<group>"; };
+		3952D2482573253300E5249C /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,10 +78,11 @@
 		3952D1FA257223DF00E5249C /* bobobox */ = {
 			isa = PBXGroup;
 			children = (
+				3952D2142572326300E5249C /* Application */,
+				3952D245257324EA00E5249C /* Presentation */,
 				3952D23125731BB100E5249C /* Domain */,
 				3952D21E257313B600E5249C /* Data */,
 				3952D21B257312C500E5249C /* Resources */,
-				3952D2142572326300E5249C /* Application */,
 				3952D1FF257223DF00E5249C /* ViewController.swift */,
 			);
 			path = bobobox;
@@ -82,8 +91,10 @@
 		3952D2142572326300E5249C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3952D23E257320CB00E5249C /* DIContainer */,
 				3952D1FB257223DF00E5249C /* AppDelegate.swift */,
 				3952D1FD257223DF00E5249C /* SceneDelegate.swift */,
+				3952D23B25731FDF00E5249C /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -129,8 +140,8 @@
 		3952D224257314EE00E5249C /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
-				3952D2252573153600E5249C /* HotelDTO+Mapping.swift */,
-				3952D22A2573172D00E5249C /* PodDTO+Mapping.swift */,
+				3952D2252573153600E5249C /* HotelListDTO+Mapping.swift */,
+				3952D22A2573172D00E5249C /* PodListDTO+Mapping.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -166,6 +177,39 @@
 				3952D23825731D8C00E5249C /* DataUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3952D23E257320CB00E5249C /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				3952D23F257320DB00E5249C /* AppDIContainer.swift */,
+				3952D2422573211E00E5249C /* MainSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		3952D245257324EA00E5249C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3952D246257324F100E5249C /* MainScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3952D246257324F100E5249C /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				3952D2472573252100E5249C /* Flow */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		3952D2472573252100E5249C /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				3952D2482573253300E5249C /* MainFlowCoordinator.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,13 +283,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3952D240257320DB00E5249C /* AppDIContainer.swift in Sources */,
 				3952D200257223DF00E5249C /* ViewController.swift in Sources */,
 				3952D23525731BCE00E5249C /* DataRepository.swift in Sources */,
-				3952D2262573153600E5249C /* HotelDTO+Mapping.swift in Sources */,
+				3952D23C25731FDF00E5249C /* AppFlowCoordinator.swift in Sources */,
+				3952D2432573211E00E5249C /* MainSceneDIContainer.swift in Sources */,
+				3952D2492573253300E5249C /* MainFlowCoordinator.swift in Sources */,
+				3952D2262573153600E5249C /* HotelListDTO+Mapping.swift in Sources */,
 				3952D23925731D8C00E5249C /* DataUseCase.swift in Sources */,
 				3952D1FC257223DF00E5249C /* AppDelegate.swift in Sources */,
 				3952D222257313E100E5249C /* FileReader.swift in Sources */,
-				3952D22B2573172D00E5249C /* PodDTO+Mapping.swift in Sources */,
+				3952D22B2573172D00E5249C /* PodListDTO+Mapping.swift in Sources */,
 				3952D1FE257223DF00E5249C /* SceneDelegate.swift in Sources */,
 				3952D22E25731B4D00E5249C /* DefaultDataRepository.swift in Sources */,
 			);
@@ -388,7 +436,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VB544QR8U9;
-				INFOPLIST_FILE = bobobox/Info.plist;
+				INFOPLIST_FILE = bobobox/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -407,7 +455,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VB544QR8U9;
-				INFOPLIST_FILE = bobobox/Info.plist;
+				INFOPLIST_FILE = bobobox/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
