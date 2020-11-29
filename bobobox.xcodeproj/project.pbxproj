@@ -24,6 +24,9 @@
 		3952D240257320DB00E5249C /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D23F257320DB00E5249C /* AppDIContainer.swift */; };
 		3952D2432573211E00E5249C /* MainSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2422573211E00E5249C /* MainSceneDIContainer.swift */; };
 		3952D2492573253300E5249C /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2482573253300E5249C /* MainFlowCoordinator.swift */; };
+		3952D2582573D09800E5249C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3952D2562573D09800E5249C /* LoginViewController.xib */; };
+		3952D2592573D09800E5249C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2572573D09800E5249C /* LoginViewController.swift */; };
+		3952D2602573D5D700E5249C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D25F2573D5D700E5249C /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		3952D23F257320DB00E5249C /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		3952D2422573211E00E5249C /* MainSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneDIContainer.swift; sourceTree = "<group>"; };
 		3952D2482573253300E5249C /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
+		3952D2562573D09800E5249C /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		3952D2572573D09800E5249C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3952D25F2573D5D700E5249C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				3952D2142572326300E5249C /* Application */,
-				3952D245257324EA00E5249C /* Presentation */,
+				3952D21B257312C500E5249C /* Resources */,
 				3952D23125731BB100E5249C /* Domain */,
 				3952D21E257313B600E5249C /* Data */,
-				3952D21B257312C500E5249C /* Resources */,
+				3952D245257324EA00E5249C /* Presentation */,
 				3952D1FF257223DF00E5249C /* ViewController.swift */,
 			);
 			path = bobobox;
@@ -200,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				3952D2472573252100E5249C /* Flow */,
+				3952D24F2573D05E00E5249C /* Login */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -210,6 +217,32 @@
 				3952D2482573253300E5249C /* MainFlowCoordinator.swift */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		3952D24F2573D05E00E5249C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3952D2552573D09800E5249C /* View */,
+				3952D25C2573D32000E5249C /* ViewModel */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3952D2552573D09800E5249C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3952D2562573D09800E5249C /* LoginViewController.xib */,
+				3952D2572573D09800E5249C /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3952D25C2573D32000E5249C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3952D25F2573D5D700E5249C /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3952D208257223E100E5249C /* LaunchScreen.storyboard in Resources */,
+				3952D2582573D09800E5249C /* LoginViewController.xib in Resources */,
 				3952D218257312BE00E5249C /* hotel_list.json in Resources */,
 				3952D205257223E100E5249C /* Assets.xcassets in Resources */,
 				3952D219257312BE00E5249C /* pod_list.json in Resources */,
@@ -285,11 +319,13 @@
 			files = (
 				3952D240257320DB00E5249C /* AppDIContainer.swift in Sources */,
 				3952D200257223DF00E5249C /* ViewController.swift in Sources */,
+				3952D2592573D09800E5249C /* LoginViewController.swift in Sources */,
 				3952D23525731BCE00E5249C /* DataRepository.swift in Sources */,
 				3952D23C25731FDF00E5249C /* AppFlowCoordinator.swift in Sources */,
 				3952D2432573211E00E5249C /* MainSceneDIContainer.swift in Sources */,
 				3952D2492573253300E5249C /* MainFlowCoordinator.swift in Sources */,
 				3952D2262573153600E5249C /* HotelListDTO+Mapping.swift in Sources */,
+				3952D2602573D5D700E5249C /* LoginViewModel.swift in Sources */,
 				3952D23925731D8C00E5249C /* DataUseCase.swift in Sources */,
 				3952D1FC257223DF00E5249C /* AppDelegate.swift in Sources */,
 				3952D222257313E100E5249C /* FileReader.swift in Sources */,

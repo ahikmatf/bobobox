@@ -17,8 +17,13 @@ final class MainSceneDIContainer: MainFlowCoordinatorDependencies {
         return DefaultDataUseCase(repository: makeDataRepository())
     }
     
-    func makeLoginViewController() -> UIViewController {
-        return ViewController()
+    func makeLoginViewModel(actions: LoginViewModelActions) -> LoginViewModel {
+        return DefaultLoginViewModel(useCase: makeDataUseCase(), actions: actions)
+    }
+    
+    func makeLoginViewController(actions: LoginViewModelActions) -> UIViewController {
+        let viewModel = makeLoginViewModel(actions: actions)
+        return LoginViewController(viewModel: viewModel)
     }
 
     func makeMainViewController() -> UIViewController {
