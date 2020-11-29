@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct HotelDTO: Decodable {
+struct HotelListDTO: Decodable {
     let status: Int
     let code: Int
     let message: String
-    let data: [HotelDetailDTO]
+    let data: [HotelDTO]
     let params: [String]
     
     private enum CodingKeys: String, CodingKey {
@@ -19,8 +19,8 @@ struct HotelDTO: Decodable {
     }
 }
 
-extension HotelDTO {
-    struct HotelDetailDTO: Decodable {
+extension HotelListDTO {
+    struct HotelDTO: Decodable {
         let id: Int
         let name: String
         let rating: String

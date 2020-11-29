@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct PodDTO: Decodable {
+struct PodListDTO: Decodable {
     let status: Int
     let code: Int
     let message: String
-    let data: [PodDetailDTO]
+    let data: [PodDTO]
     let params: [String]
     
     private enum CodingKeys: String, CodingKey {
@@ -19,8 +19,8 @@ struct PodDTO: Decodable {
     }
 }
 
-extension PodDTO {
-    struct PodDetailDTO: Decodable {
+extension PodListDTO {
+    struct PodDTO: Decodable {
         let roomId: Int
         let roomStatus: Int
         let roomStatusCode: String
@@ -40,7 +40,7 @@ extension PodDTO {
     }
 }
 
-extension PodDTO.PodDetailDTO {
+extension PodListDTO.PodDTO {
     struct PodNoteDTO: Decodable {
         let noteId: Int
         let noteName: String
