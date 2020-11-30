@@ -28,6 +28,7 @@ class MainViewController: UIViewController {
         let sliderBackground = createSliderBackground()
         showSelectorSlider(with: viewModel.getPodFilterOptions()) { (selection) in
             self.podFilter = PodStatus.init(rawValue: selection?.key.uppercased() ?? "ALL") ?? .ALL
+            sender.setTitle(selection?.value, for: .normal)
             
             UIView.animate(withDuration: 0.5) {
                 sliderBackground.alpha = 0
