@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, Alertable {
     
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var hotelNameLabel: UILabel!
@@ -94,7 +94,20 @@ class MainViewController: UIViewController {
     
     private func handleViewTypeSwitch() {
         if podViewType == .list {
-            let layoutConfig = UICollectionLayoutListConfiguration(appearance: .plain)
+            var layoutConfig = UICollectionLayoutListConfiguration(appearance: .plain)
+            layoutConfig.trailingSwipeActionsConfigurationProvider = { (indexPath) in
+                let data = self.viewModel.getPod(for: indexPath.row)
+                let actionHandler: UIContextualAction.Handler = { action, view, completion in
+                    self.showAlert(title: "Continue this action?",
+                                   message: "Are you sure you want to change \(data.roomStatusCode) to VCI?")
+                }
+                
+                let action = UIContextualAction(style: .normal, title: "OOO", handler: actionHandler)
+                action.backgroundColor = .systemOrange
+                
+                return UISwipeActionsConfiguration(actions: [action])
+            }
+            
             let listLayout = UICollectionViewCompositionalLayout.list(using: layoutConfig)
             
             podCollectionView.collectionViewLayout = listLayout

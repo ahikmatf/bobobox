@@ -41,6 +41,7 @@
 		3952D28D2574F0E300E5249C /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D28C2574F0E300E5249C /* BaseCell.swift */; };
 		3952D29B25751B0E00E5249C /* SelectorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D29A25751B0E00E5249C /* SelectorSlider.swift */; };
 		3952D29E25751B2700E5249C /* SelectorSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3952D29D25751B2700E5249C /* SelectorSlider.xib */; };
+		3952D2A42575354A00E5249C /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2A32575354900E5249C /* Alertable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		3952D28C2574F0E300E5249C /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		3952D29A25751B0E00E5249C /* SelectorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorSlider.swift; sourceTree = "<group>"; };
 		3952D29D25751B2700E5249C /* SelectorSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorSlider.xib; sourceTree = "<group>"; };
+		3952D2A32575354900E5249C /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +235,7 @@
 		3952D246257324F100E5249C /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				3952D2A22575353B00E5249C /* Utils */,
 				3952D2472573252100E5249C /* Flow */,
 				3952D24F2573D05E00E5249C /* Login */,
 				3952D2632573DC9400E5249C /* Main */,
@@ -335,6 +338,14 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
+		3952D2A22575353B00E5249C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3952D2A32575354900E5249C /* Alertable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -429,6 +440,7 @@
 				3952D23925731D8C00E5249C /* DataUseCase.swift in Sources */,
 				3952D2712573E27100E5249C /* Hotel.swift in Sources */,
 				3952D1FC257223DF00E5249C /* AppDelegate.swift in Sources */,
+				3952D2A42575354A00E5249C /* Alertable.swift in Sources */,
 				3952D28A2574EE8100E5249C /* PodSummary.swift in Sources */,
 				3952D222257313E100E5249C /* FileReader.swift in Sources */,
 				3952D22B2573172D00E5249C /* PodListDTO+Mapping.swift in Sources */,
