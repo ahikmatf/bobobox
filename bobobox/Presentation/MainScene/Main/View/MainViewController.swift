@@ -174,7 +174,32 @@ extension MainViewController: UICollectionViewDataSource {
     }
 }
 
-extension MainViewController: UICollectionViewDelegate {}
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if podViewType == .list {
+            let data = viewModel.getPod(for: indexPath.row)
+            
+            let sliderBackground = createSliderBackground()
+            let qrView = UINib(nibName: String(describing: QRView.self), bundle: nil).instantiate(withOwner: nil, options: nil).first as? QRView
+            qrView?.frame = CGRect(x: 0, y: view.frame.height, width: view.frame.width, height: 400)
+            qrView?.podName = data.roomName
+            qrView?.qrCode = data.qrCode
+            qrView?.closure = {
+                UIView.animate(withDuration: 0.5) {
+                    sliderBackground.alpha = 0
+                }
+            }
+            view.addSubview(qrView ?? UIView())
+            
+            UIView.animate(withDuration: 0.5) {
+                qrView?.frame = CGRect(x: 0,
+                                       y: self.view.frame.height - 400,
+                                       width: self.view.frame.width,
+                                       height: 400)
+            }
+        }
+    }
+}
 
 extension MainViewController {
     private func createSliderBackground() -> UIView {

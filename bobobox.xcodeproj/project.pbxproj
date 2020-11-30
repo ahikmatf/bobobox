@@ -45,6 +45,8 @@
 		3952D2A72575397200E5249C /* OOOAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2A62575397200E5249C /* OOOAlert.swift */; };
 		3952D2AA2575397E00E5249C /* OOOAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3952D2A92575397E00E5249C /* OOOAlert.xib */; };
 		3952D2AD25753A1400E5249C /* ActiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2AC25753A1400E5249C /* ActiveButton.swift */; };
+		3952D2B0257546DE00E5249C /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2AF257546DE00E5249C /* QRView.swift */; };
+		3952D2B3257546E800E5249C /* QRView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3952D2B2257546E800E5249C /* QRView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		3952D2A62575397200E5249C /* OOOAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOOAlert.swift; sourceTree = "<group>"; };
 		3952D2A92575397E00E5249C /* OOOAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OOOAlert.xib; sourceTree = "<group>"; };
 		3952D2AC25753A1400E5249C /* ActiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveButton.swift; sourceTree = "<group>"; };
+		3952D2AF257546DE00E5249C /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
+		3952D2B2257546E800E5249C /* QRView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +346,8 @@
 				3952D29D25751B2700E5249C /* SelectorSlider.xib */,
 				3952D2A62575397200E5249C /* OOOAlert.swift */,
 				3952D2A92575397E00E5249C /* OOOAlert.xib */,
+				3952D2AF257546DE00E5249C /* QRView.swift */,
+				3952D2B2257546E800E5249C /* QRView.xib */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 				3952D29E25751B2700E5249C /* SelectorSlider.xib in Resources */,
 				3952D2582573D09800E5249C /* LoginViewController.xib in Resources */,
 				3952D2AA2575397E00E5249C /* OOOAlert.xib in Resources */,
+				3952D2B3257546E800E5249C /* QRView.xib in Resources */,
 				3952D281257489F700E5249C /* GridCell.xib in Resources */,
 				3952D218257312BE00E5249C /* hotel_list.json in Resources */,
 				3952D205257223E100E5249C /* Assets.xcassets in Resources */,
@@ -459,6 +466,7 @@
 				3952D1FE257223DF00E5249C /* SceneDelegate.swift in Sources */,
 				3952D22E25731B4D00E5249C /* DefaultDataRepository.swift in Sources */,
 				3952D2872574939800E5249C /* GridCellViewModel.swift in Sources */,
+				3952D2B0257546DE00E5249C /* QRView.swift in Sources */,
 				3952D280257489F700E5249C /* GridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
