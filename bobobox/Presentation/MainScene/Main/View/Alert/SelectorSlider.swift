@@ -32,8 +32,6 @@ extension SelectorSlider: UITableViewDataSource {
         let cell = UITableViewCell()
         cell.textLabel?.text = data[indexPath.row]?.value
         
-        print(indexPath)
-        
         return cell
     }
 }
