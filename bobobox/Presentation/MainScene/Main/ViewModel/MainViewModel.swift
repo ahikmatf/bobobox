@@ -54,23 +54,23 @@ extension DefaultMainViewModel: MainViewModel {
     }
     
     func getTotalDataCount(viewType: ViewType, filter: PodStatus) -> Int {
+        var filterKey = ""
+        switch filter {
+        case .ALL:
+            break
+        case .VD:
+            filterKey = "VD"
+        case .VC:
+            filterKey = "VC"
+        case .VCI:
+            filterKey = "VCI"
+        case .O:
+            filterKey = "OC"
+        case .OOO:
+            filterKey = "OUD"
+        }
+
         if viewType == .list {
-            var filterKey = ""
-            switch filter {
-            case .ALL:
-                break
-            case .VD:
-                filterKey = "VD"
-            case .VC:
-                filterKey = "VC"
-            case .VCI:
-                filterKey = "VCI"
-            case .O:
-                filterKey = "OC"
-            case .OOO:
-                filterKey = "OUD"
-            }
-            
             if filterKey != "" {
                 filteredPodList = podList.filter { $0.roomStatusCode == filterKey }
             } else {
@@ -79,7 +79,11 @@ extension DefaultMainViewModel: MainViewModel {
             
             return filteredPodList.count
         } else if viewType == .grid {
-            filteredPodSummaryList = podSummaryList
+            if filterKey != "" {
+                filteredPodSummaryList = podSummaryList.filter { $0.podStatus == filterKey }
+            } else {
+                filteredPodSummaryList = podSummaryList
+            }
             
             return filteredPodSummaryList.count
         }
