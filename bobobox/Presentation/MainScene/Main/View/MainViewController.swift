@@ -17,6 +17,14 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func switchPodFilterDidTap(_ sender: UIButton) {
+        let sliderBackground = createSliderBackground()
+        showSelectorSlider(with: viewModel.getPodFilterOptions()) { (status) in
+            self.podFilter = PodStatus.init(rawValue: status?.uppercased() ?? "ALL") ?? .ALL
+            
+            UIView.animate(withDuration: 0.5) {
+                sliderBackground.alpha = 0
+            }
+        }
     }
     
     @IBAction func switchViewTypeDidTap(_ sender: UISegmentedControl) {
@@ -33,7 +41,11 @@ class MainViewController: UIViewController {
     }
     
     var podViewType: ViewType = .list
-    var podFilter: PodStatus = .ALL
+    var podFilter: PodStatus = .ALL {
+        didSet {
+            podCollectionView.reloadData()
+        }
+    }
     let viewModel: MainViewModel
     let userName: String
     
@@ -124,3 +136,30 @@ extension MainViewController: UICollectionViewDataSource {
 }
 
 extension MainViewController: UICollectionViewDelegate {}
+
+extension MainViewController {
+    private func createSliderBackground() -> UIView {
+        let sliderBackground = UIView()
+        sliderBackground.backgroundColor = .black
+        sliderBackground.frame = view.frame
+        sliderBackground.alpha = 0.7
+        view.addSubview(sliderBackground)
+        
+        return sliderBackground
+    }
+    
+    private func showSelectorSlider(with data: [Int: (key: String, value: String)], didSelect: @escaping (String?) -> Void) {
+        let slider = UINib(nibName: String(describing: SelectorSlider.self), bundle: nil).instantiate(withOwner: nil, options: nil).first as? SelectorSlider
+        slider?.frame = CGRect(x: 0, y: view.frame.height, width: view.frame.width, height: 400)
+        slider?.didSelect = didSelect
+        slider?.data = data
+        view.addSubview(slider ?? UIView())
+        
+        UIView.animate(withDuration: 0.5) {
+            slider?.frame = CGRect(x: 0,
+                                   y: self.view.frame.height - 400,
+                                   width: self.view.frame.width,
+                                   height: 400)
+        }
+    }
+}

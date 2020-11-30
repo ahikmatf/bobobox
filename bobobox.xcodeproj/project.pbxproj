@@ -39,6 +39,8 @@
 		3952D2872574939800E5249C /* GridCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2862574939800E5249C /* GridCellViewModel.swift */; };
 		3952D28A2574EE8100E5249C /* PodSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2892574EE8100E5249C /* PodSummary.swift */; };
 		3952D28D2574F0E300E5249C /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D28C2574F0E300E5249C /* BaseCell.swift */; };
+		3952D29B25751B0E00E5249C /* SelectorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D29A25751B0E00E5249C /* SelectorSlider.swift */; };
+		3952D29E25751B2700E5249C /* SelectorSlider.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3952D29D25751B2700E5249C /* SelectorSlider.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		3952D2862574939800E5249C /* GridCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellViewModel.swift; sourceTree = "<group>"; };
 		3952D2892574EE8100E5249C /* PodSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodSummary.swift; sourceTree = "<group>"; };
 		3952D28C2574F0E300E5249C /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		3952D29A25751B0E00E5249C /* SelectorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorSlider.swift; sourceTree = "<group>"; };
+		3952D29D25751B2700E5249C /* SelectorSlider.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorSlider.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +286,7 @@
 		3952D2642573DCA600E5249C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3952D2992574FB2D00E5249C /* Alert */,
 				3952D278257489B400E5249C /* Cell */,
 				3952D2662573DCCA00E5249C /* MainViewController.swift */,
 				3952D2672573DCCA00E5249C /* MainViewController.xib */,
@@ -319,6 +324,15 @@
 				3952D28C2574F0E300E5249C /* BaseCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3952D2992574FB2D00E5249C /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				3952D29A25751B0E00E5249C /* SelectorSlider.swift */,
+				3952D29D25751B2700E5249C /* SelectorSlider.xib */,
+			);
+			path = Alert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,6 +394,7 @@
 			files = (
 				3952D208257223E100E5249C /* LaunchScreen.storyboard in Resources */,
 				3952D2692573DCCA00E5249C /* MainViewController.xib in Resources */,
+				3952D29E25751B2700E5249C /* SelectorSlider.xib in Resources */,
 				3952D2582573D09800E5249C /* LoginViewController.xib in Resources */,
 				3952D281257489F700E5249C /* GridCell.xib in Resources */,
 				3952D218257312BE00E5249C /* hotel_list.json in Resources */,
@@ -399,6 +414,7 @@
 				3952D2842574934D00E5249C /* ListCellViewModel.swift in Sources */,
 				3952D240257320DB00E5249C /* AppDIContainer.swift in Sources */,
 				3952D2742573E27900E5249C /* Pod.swift in Sources */,
+				3952D29B25751B0E00E5249C /* SelectorSlider.swift in Sources */,
 				3952D2592573D09800E5249C /* LoginViewController.swift in Sources */,
 				3952D28D2574F0E300E5249C /* BaseCell.swift in Sources */,
 				3952D23525731BCE00E5249C /* DataRepository.swift in Sources */,

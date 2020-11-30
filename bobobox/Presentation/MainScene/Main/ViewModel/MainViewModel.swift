@@ -27,6 +27,8 @@ protocol MainViewModel {
     func getTotalDataCount(viewType: ViewType, filter: PodStatus) -> Int
     func getPod(for index: Int) -> Pod
     func getPodSummary(for index: Int) -> PodSummary
+    
+    func getPodFilterOptions() -> [Int: (key: String, value: String)]
 }
 
 class DefaultMainViewModel {
@@ -90,5 +92,16 @@ extension DefaultMainViewModel: MainViewModel {
     
     func getPodSummary(for index: Int) -> PodSummary {
         return filteredPodSummaryList[index]
+    }
+    
+    func getPodFilterOptions() -> [Int : (key: String, value: String)] {
+        return [
+            0: (key: "all", value: "All Status"),
+            1: (key: "vd", value: "Vacant Dirty"),
+            2: (key: "vc", value: "Vacant Cleaned"),
+            3: (key: "vci", value: "Vacant Clean Inspected"),
+            4: (key: "o", value: "Occupied"),
+            5: (key: "ooo", value: "Out of Order")
+        ]
     }
 }
