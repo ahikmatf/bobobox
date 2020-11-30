@@ -37,6 +37,8 @@
 		3952D281257489F700E5249C /* GridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3952D27F257489F700E5249C /* GridCell.xib */; };
 		3952D2842574934D00E5249C /* ListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2832574934D00E5249C /* ListCellViewModel.swift */; };
 		3952D2872574939800E5249C /* GridCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2862574939800E5249C /* GridCellViewModel.swift */; };
+		3952D28A2574EE8100E5249C /* PodSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2892574EE8100E5249C /* PodSummary.swift */; };
+		3952D28D2574F0E300E5249C /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D28C2574F0E300E5249C /* BaseCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		3952D27F257489F700E5249C /* GridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCell.xib; sourceTree = "<group>"; };
 		3952D2832574934D00E5249C /* ListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellViewModel.swift; sourceTree = "<group>"; };
 		3952D2862574939800E5249C /* GridCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellViewModel.swift; sourceTree = "<group>"; };
+		3952D2892574EE8100E5249C /* PodSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodSummary.swift; sourceTree = "<group>"; };
+		3952D28C2574F0E300E5249C /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +304,7 @@
 			children = (
 				3952D2702573E27100E5249C /* Hotel.swift */,
 				3952D2732573E27900E5249C /* Pod.swift */,
+				3952D2892574EE8100E5249C /* PodSummary.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				3952D27A257489E000E5249C /* ListCell.xib */,
 				3952D27E257489F700E5249C /* GridCell.swift */,
 				3952D27F257489F700E5249C /* GridCell.xib */,
+				3952D28C2574F0E300E5249C /* BaseCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -394,6 +400,7 @@
 				3952D240257320DB00E5249C /* AppDIContainer.swift in Sources */,
 				3952D2742573E27900E5249C /* Pod.swift in Sources */,
 				3952D2592573D09800E5249C /* LoginViewController.swift in Sources */,
+				3952D28D2574F0E300E5249C /* BaseCell.swift in Sources */,
 				3952D23525731BCE00E5249C /* DataRepository.swift in Sources */,
 				3952D27B257489E000E5249C /* ListCell.swift in Sources */,
 				3952D23C25731FDF00E5249C /* AppFlowCoordinator.swift in Sources */,
@@ -406,6 +413,7 @@
 				3952D23925731D8C00E5249C /* DataUseCase.swift in Sources */,
 				3952D2712573E27100E5249C /* Hotel.swift in Sources */,
 				3952D1FC257223DF00E5249C /* AppDelegate.swift in Sources */,
+				3952D28A2574EE8100E5249C /* PodSummary.swift in Sources */,
 				3952D222257313E100E5249C /* FileReader.swift in Sources */,
 				3952D22B2573172D00E5249C /* PodListDTO+Mapping.swift in Sources */,
 				3952D1FE257223DF00E5249C /* SceneDelegate.swift in Sources */,

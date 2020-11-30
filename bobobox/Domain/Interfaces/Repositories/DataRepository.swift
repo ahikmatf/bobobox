@@ -10,4 +10,5 @@ import Foundation
 protocol DataRepository {
     func fetchHotelList() -> [Hotel]
     func fetchPodList() -> [Pod]
+    func fetchPodSummaryList() -> [PodSummary]
 }

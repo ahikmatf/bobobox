@@ -10,6 +10,7 @@ import Foundation
 protocol DataUseCase {
     func getHotelList() -> [Hotel]
     func getPodList() -> [Pod]
+    func getPodSummaryList() -> [PodSummary]
 }
 
 final class DefaultDataUseCase {
@@ -27,5 +28,9 @@ extension DefaultDataUseCase: DataUseCase {
     
     func getPodList() -> [Pod] {
         return repository.fetchPodList()
+    }
+    
+    func getPodSummaryList() -> [PodSummary] {
+        return repository.fetchPodSummaryList()
     }
 }

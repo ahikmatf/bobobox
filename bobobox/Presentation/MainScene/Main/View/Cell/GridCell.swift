@@ -7,12 +7,18 @@
 
 import UIKit
 
-class GridCell: UICollectionViewCell {
+class GridCell: BaseCell {
     static let reuseIdentifier = String(describing: GridCell.self)
+    
+    @IBOutlet weak var dotImage: UIImageView!
+    @IBOutlet weak var podStatus: UILabel!
+    @IBOutlet weak var podCount: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func fill(with viewModel: GridCellViewModel) {
+        dotImage.tintColor = getColor(for: viewModel.podStatus)
+        podStatus.textColor = getColor(for: viewModel.podStatus)
+        podStatus.text = viewModel.podStatus
+        podCount.text = "\(viewModel.podCount)"
     }
 
 }

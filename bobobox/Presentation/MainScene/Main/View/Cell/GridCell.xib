@@ -112,6 +112,11 @@
                 <constraint firstAttribute="trailing" secondItem="q9Z-ya-cNF" secondAttribute="trailing" id="za5-lt-SQ9"/>
             </constraints>
             <size key="customSize" width="174" height="151"/>
+            <connections>
+                <outlet property="dotImage" destination="I9o-Ki-hjW" id="Esm-fs-UUS"/>
+                <outlet property="podCount" destination="JH1-xD-3xN" id="9MG-b7-Csn"/>
+                <outlet property="podStatus" destination="mqo-ys-S4k" id="jOY-tv-zhD"/>
+            </connections>
             <point key="canvasLocation" x="42.028985507246382" y="83.035714285714278"/>
         </collectionViewCell>
     </objects>

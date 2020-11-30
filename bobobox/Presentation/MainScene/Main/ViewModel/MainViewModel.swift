@@ -26,6 +26,7 @@ protocol MainViewModel {
     
     func getTotalDataCount(viewType: ViewType, filter: PodStatus) -> Int
     func getPod(for index: Int) -> Pod
+    func getPodSummary(for index: Int) -> PodSummary
 }
 
 class DefaultMainViewModel {
@@ -34,6 +35,8 @@ class DefaultMainViewModel {
     private var hotelList = [Hotel]()
     private var podList = [Pod]()
     private var filteredPodList = [Pod]()
+    private var podSummaryList = [PodSummary]()
+    private var filteredPodSummaryList = [PodSummary]()
     
     init(useCase: DataUseCase) {
         self.useCase = useCase
@@ -44,6 +47,7 @@ extension DefaultMainViewModel: MainViewModel {
     func viewDidLoad() {
         hotelList = useCase.getHotelList()
         podList = useCase.getPodList()
+        podSummaryList = useCase.getPodSummaryList()
     }
     
     func getTotalDataCount(viewType: ViewType, filter: PodStatus) -> Int {
@@ -69,15 +73,22 @@ extension DefaultMainViewModel: MainViewModel {
             } else {
                 filteredPodList = podList
             }
+            
+            return filteredPodList.count
         } else if viewType == .grid {
-            // TODO: handle grid
-            filteredPodList = podList
+            filteredPodSummaryList = podSummaryList
+            
+            return filteredPodSummaryList.count
         }
         
-        return filteredPodList.count
+        return 0
     }
     
     func getPod(for index: Int) -> Pod {
         return filteredPodList[index]
+    }
+    
+    func getPodSummary(for index: Int) -> PodSummary {
+        return filteredPodSummaryList[index]
     }
 }

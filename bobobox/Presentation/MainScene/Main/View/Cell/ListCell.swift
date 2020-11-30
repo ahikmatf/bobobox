@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListCell: UICollectionViewCell {
+class ListCell: BaseCell {
     static let reuseIdentifier = String(describing: ListCell.self)
     
     @IBOutlet weak var podNameLabel: UILabel!
@@ -22,23 +22,7 @@ class ListCell: UICollectionViewCell {
     }
     
     private func setStatusBackground(status: String) {
-        var color = UIColor.white
-        switch status {
-        case "VC":
-            color = .orange
-        case "VCI":
-            color = .green
-        case "OUD":
-            color = .red
-        case "VD":
-            color = .gray
-        case "O": // occupied
-            color = .blue
-        default:
-            break
-        }
-        
-        statusBackground.backgroundColor = color
+        statusBackground.backgroundColor = getColor(for: status)
         statusBackground.layer.cornerRadius = statusBackground.frame.height / 2
     }
     

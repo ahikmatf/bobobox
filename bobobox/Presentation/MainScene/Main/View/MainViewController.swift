@@ -115,7 +115,7 @@ extension MainViewController: UICollectionViewDataSource {
                                                                 for: indexPath) as? GridCell
             else { return UICollectionViewCell() }
             
-//            cell.fill(with: ListCellViewModel(pod: viewModel.getPod(for: indexPath.row)))
+            cell.fill(with: GridCellViewModel(podSummary: viewModel.getPodSummary(for: indexPath.row)))
             return cell
         }
         

@@ -25,4 +25,26 @@ extension DefaultDataRepository: DataRepository {
         guard let podsList: PodListDTO = fileReader.fromJSON(named: "pod_list") else { return [] }
         return podsList.toDomain()
     }
+    
+    func fetchPodSummaryList() -> [PodSummary] {
+        guard let podsList: PodListDTO = fileReader.fromJSON(named: "pod_list") else { return [] }
+        let pods = podsList.toDomain()
+        
+        var podSummaryDict = [String: Int]()
+        pods.forEach { (pod) in
+            if let count = podSummaryDict[pod.roomStatusCode] {
+                podSummaryDict[pod.roomStatusCode] = count + 1
+            } else {
+                podSummaryDict[pod.roomStatusCode] = 1
+            }
+        }
+        
+        var podSummaries = [PodSummary]()
+        podSummaryDict.forEach { (key, value) in
+            let podSummary = PodSummary(podStatus: key, podCount: value)
+            podSummaries.append(podSummary)
+        }
+        
+        return podSummaries
+    }
 }

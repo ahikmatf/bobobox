@@ -8,5 +8,13 @@
 import Foundation
 
 struct GridCellViewModel {
-    
+    let podStatus: String
+    let podCount: Int
+}
+
+extension GridCellViewModel {
+    init(podSummary: PodSummary) {
+        self.podStatus = podSummary.podStatus
+        self.podCount = podSummary.podCount
+    }
 }
