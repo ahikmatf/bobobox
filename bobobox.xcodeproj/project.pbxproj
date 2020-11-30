@@ -31,6 +31,12 @@
 		3952D26D2573DCD900E5249C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D26C2573DCD900E5249C /* MainViewModel.swift */; };
 		3952D2712573E27100E5249C /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2702573E27100E5249C /* Hotel.swift */; };
 		3952D2742573E27900E5249C /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2732573E27900E5249C /* Pod.swift */; };
+		3952D27B257489E000E5249C /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D279257489E000E5249C /* ListCell.swift */; };
+		3952D27C257489E000E5249C /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3952D27A257489E000E5249C /* ListCell.xib */; };
+		3952D280257489F700E5249C /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D27E257489F700E5249C /* GridCell.swift */; };
+		3952D281257489F700E5249C /* GridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3952D27F257489F700E5249C /* GridCell.xib */; };
+		3952D2842574934D00E5249C /* ListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2832574934D00E5249C /* ListCellViewModel.swift */; };
+		3952D2872574939800E5249C /* GridCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3952D2862574939800E5249C /* GridCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,12 @@
 		3952D26C2573DCD900E5249C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		3952D2702573E27100E5249C /* Hotel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
 		3952D2732573E27900E5249C /* Pod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pod.swift; sourceTree = "<group>"; };
+		3952D279257489E000E5249C /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		3952D27A257489E000E5249C /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		3952D27E257489F700E5249C /* GridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		3952D27F257489F700E5249C /* GridCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridCell.xib; sourceTree = "<group>"; };
+		3952D2832574934D00E5249C /* ListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellViewModel.swift; sourceTree = "<group>"; };
+		3952D2862574939800E5249C /* GridCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +278,7 @@
 		3952D2642573DCA600E5249C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3952D278257489B400E5249C /* Cell */,
 				3952D2662573DCCA00E5249C /* MainViewController.swift */,
 				3952D2672573DCCA00E5249C /* MainViewController.xib */,
 			);
@@ -276,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				3952D26C2573DCD900E5249C /* MainViewModel.swift */,
+				3952D2832574934D00E5249C /* ListCellViewModel.swift */,
+				3952D2862574939800E5249C /* GridCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -287,6 +302,17 @@
 				3952D2732573E27900E5249C /* Pod.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		3952D278257489B400E5249C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3952D279257489E000E5249C /* ListCell.swift */,
+				3952D27A257489E000E5249C /* ListCell.xib */,
+				3952D27E257489F700E5249C /* GridCell.swift */,
+				3952D27F257489F700E5249C /* GridCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,9 +375,11 @@
 				3952D208257223E100E5249C /* LaunchScreen.storyboard in Resources */,
 				3952D2692573DCCA00E5249C /* MainViewController.xib in Resources */,
 				3952D2582573D09800E5249C /* LoginViewController.xib in Resources */,
+				3952D281257489F700E5249C /* GridCell.xib in Resources */,
 				3952D218257312BE00E5249C /* hotel_list.json in Resources */,
 				3952D205257223E100E5249C /* Assets.xcassets in Resources */,
 				3952D219257312BE00E5249C /* pod_list.json in Resources */,
+				3952D27C257489E000E5249C /* ListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,10 +390,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3952D2842574934D00E5249C /* ListCellViewModel.swift in Sources */,
 				3952D240257320DB00E5249C /* AppDIContainer.swift in Sources */,
 				3952D2742573E27900E5249C /* Pod.swift in Sources */,
 				3952D2592573D09800E5249C /* LoginViewController.swift in Sources */,
 				3952D23525731BCE00E5249C /* DataRepository.swift in Sources */,
+				3952D27B257489E000E5249C /* ListCell.swift in Sources */,
 				3952D23C25731FDF00E5249C /* AppFlowCoordinator.swift in Sources */,
 				3952D2432573211E00E5249C /* MainSceneDIContainer.swift in Sources */,
 				3952D2492573253300E5249C /* MainFlowCoordinator.swift in Sources */,
@@ -380,6 +410,8 @@
 				3952D22B2573172D00E5249C /* PodListDTO+Mapping.swift in Sources */,
 				3952D1FE257223DF00E5249C /* SceneDelegate.swift in Sources */,
 				3952D22E25731B4D00E5249C /* DefaultDataRepository.swift in Sources */,
+				3952D2872574939800E5249C /* GridCellViewModel.swift in Sources */,
+				3952D280257489F700E5249C /* GridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
