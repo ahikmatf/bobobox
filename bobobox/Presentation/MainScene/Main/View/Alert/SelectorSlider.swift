@@ -10,7 +10,7 @@ import UIKit
 class SelectorSlider: UIView {
     @IBOutlet weak var sliderTableView: UITableView!
     
-    var didSelect: (String?) -> Void = { _ in }
+    var didSelect: ((key: String, value: String)?) -> Void = { _ in }
     var data = [Int: (key: String, value: String)]() {
         didSet { setupTableView() }
     }
@@ -40,7 +40,7 @@ extension SelectorSlider: UITableViewDataSource {
 
 extension SelectorSlider: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        didSelect(data[indexPath.row]?.key)
+        didSelect(data[indexPath.row])
         removeFromSuperview()
     }
 }

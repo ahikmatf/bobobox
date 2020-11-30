@@ -29,6 +29,7 @@ protocol MainViewModel {
     func getPodSummary(for index: Int) -> PodSummary
     
     func getPodFilterOptions() -> [Int: (key: String, value: String)]
+    func getHotelOptions() -> [Int: (key: String, value: String)]
 }
 
 class DefaultMainViewModel {
@@ -103,5 +104,14 @@ extension DefaultMainViewModel: MainViewModel {
             4: (key: "o", value: "Occupied"),
             5: (key: "ooo", value: "Out of Order")
         ]
+    }
+    
+    func getHotelOptions() -> [Int: (key: String, value: String)] {
+        var data = [Int: (key: String, value: String)]()
+        for (index, hotel) in hotelList.enumerated() {
+            data[index] = (key: "\(hotel.id)", value: hotel.name)
+        }
+        
+        return data
     }
 }

@@ -14,12 +14,20 @@ class MainViewController: UIViewController {
     @IBOutlet weak var podCollectionView: UICollectionView!
     
     @IBAction func switchHotelDidTap(_ sender: UIButton) {
+        let sliderBackground = createSliderBackground()
+        showSelectorSlider(with: viewModel.getHotelOptions()) { (selection) in
+            self.hotelNameLabel.text = selection?.value
+            
+            UIView.animate(withDuration: 0.5) {
+                sliderBackground.alpha = 0
+            }
+        }
     }
     
     @IBAction func switchPodFilterDidTap(_ sender: UIButton) {
         let sliderBackground = createSliderBackground()
-        showSelectorSlider(with: viewModel.getPodFilterOptions()) { (status) in
-            self.podFilter = PodStatus.init(rawValue: status?.uppercased() ?? "ALL") ?? .ALL
+        showSelectorSlider(with: viewModel.getPodFilterOptions()) { (selection) in
+            self.podFilter = PodStatus.init(rawValue: selection?.key.uppercased() ?? "ALL") ?? .ALL
             
             UIView.animate(withDuration: 0.5) {
                 sliderBackground.alpha = 0
@@ -148,7 +156,7 @@ extension MainViewController {
         return sliderBackground
     }
     
-    private func showSelectorSlider(with data: [Int: (key: String, value: String)], didSelect: @escaping (String?) -> Void) {
+    private func showSelectorSlider(with data: [Int: (key: String, value: String)], didSelect: @escaping ((key: String, value: String)?) -> Void) {
         let slider = UINib(nibName: String(describing: SelectorSlider.self), bundle: nil).instantiate(withOwner: nil, options: nil).first as? SelectorSlider
         slider?.frame = CGRect(x: 0, y: view.frame.height, width: view.frame.width, height: 400)
         slider?.didSelect = didSelect
