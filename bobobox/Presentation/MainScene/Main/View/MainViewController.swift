@@ -102,9 +102,26 @@ class MainViewController: UIViewController, Alertable {
                                    message: "Are you sure you want to change \(data.roomStatusCode) to VCI?")
                 }
                 
-                let action = UIContextualAction(style: .normal, title: "OOO", handler: actionHandler)
+                let action = UIContextualAction(style: .normal, title: "VCI", handler: actionHandler)
                 action.backgroundColor = .systemOrange
                 
+                return UISwipeActionsConfiguration(actions: [action])
+            }
+            layoutConfig.leadingSwipeActionsConfigurationProvider = { (indexPath) in
+                let actionHandler: UIContextualAction.Handler = { action, view, completion in
+                    let alertView = UINib(nibName: String(describing: OOOAlert.self), bundle: nil).instantiate(withOwner: nil, options: nil).first as? OOOAlert
+                    alertView?.setupViews()
+                    alertView?.frame = self.view.frame
+                    alertView?.alpha = 0
+                    self.view.addSubview(alertView ?? UIView())
+                    
+                    UIView.animate(withDuration: 0.5) {
+                        alertView?.alpha = 1
+                    }
+                }
+                
+                let action = UIContextualAction(style: .normal, title: "OOO", handler: actionHandler)
+                action.backgroundColor = .systemRed
                 return UISwipeActionsConfiguration(actions: [action])
             }
             
